@@ -1,0 +1,6 @@
+class Event < ActiveRecord::Base
+  attr_accessible :name, :neighborhood_id, :user_id
+
+  belongs_to :user
+	belongs_to :neighborhood 
+end

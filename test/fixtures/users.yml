@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  type: 
+  neighborhood_id: 1
+  zipcode_id: 1
+
+two:
+  type: 
+  neighborhood_id: 1
+  zipcode_id: 1
