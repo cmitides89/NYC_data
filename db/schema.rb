@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130506220106) do
+ActiveRecord::Schema.define(:version => 20130507022123) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
@@ -39,6 +39,10 @@ ActiveRecord::Schema.define(:version => 20130506220106) do
     t.integer  "neighborhood_id"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.string   "address"
+    t.string   "time"
+    t.string   "venue"
+    t.text     "description"
   end
 
   create_table "neighborhoods", :force => true do |t|
