@@ -1,5 +1,14 @@
-<h1> Zipcodes Partial </h1>
+<h1> 311 calls </h1>
+<table>
 
-<% @city.each do |a| %>
-	<p><%= a %></p>
-	<% end %>
+<% (0..@created.length - 1).each do |i| %>
+
+	<tr>
+			<td><%= @city[i] %></td>
+			<td><%= @created[i] %></td>
+			<td><%= @zip[i] %></td>
+			<td><%= @complaint[i] %></td>
+	</tr>
+
+<% end %>
+</table>
