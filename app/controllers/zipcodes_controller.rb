@@ -1,7 +1,7 @@
 class ZipcodesController < ApplicationController
 
 	def index
-		response = HTTParty.get("http://data.cityofnewyork.us/resource/erm2-nwe9.json?$limit=5&$select=city,complaint_type,incident_zip,created_date&$order=created_date")
+		response = HTTParty.get("http://data.cityofnewyork.us/resource/erm2-nwe9.json?incident_zip=10010&$limit=5&$select=city,complaint_type,incident_zip,created_date&$order=created_date")
 		@created = []
 		@city = []
 		@zip = []
@@ -12,7 +12,6 @@ class ZipcodesController < ApplicationController
 			@zip << x["incident_zip"]
 			@complaint << x["complaint_type"]
 		end
-		# @zipcode = Zipcode.find(params[:zipcode])
 		respond_to do |format|
 		format.html do
 			render @zipcode
@@ -24,7 +23,9 @@ class ZipcodesController < ApplicationController
 
 
 	def search
-
+		@zipcode = Zipcode.query(params[:search])
+		binding.pry
+		redirect_to zipcodes_path
 	end
 
 end

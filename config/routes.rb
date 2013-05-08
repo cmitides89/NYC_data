@@ -1,7 +1,10 @@
 NYCdata::Application.routes.draw do
 
-  resources :zipcodes, :only => [:index]
-
+  resources :zipcodes do
+collection do
+    post 'search'
+  end
+end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
