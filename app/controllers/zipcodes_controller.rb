@@ -22,4 +22,9 @@ class ZipcodesController < ApplicationController
 	end
 
 
+
+	def search
+
+	end
+
 end
