@@ -76,24 +76,13 @@
       "/Users/kbajorin/projects/NYC_DATA/app/models/zipcode.rb": [
         1,
         1,
-        1,
-        1,
-        null,
-        null,
-        null,
         null,
         1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        1,
         null,
+        null,
+        1,
+        0,
         null,
         null,
         null,
@@ -136,6 +125,6 @@
         null
       ]
     },
-    "timestamp": 1368043387
+    "timestamp": 1368043897
   }
 }

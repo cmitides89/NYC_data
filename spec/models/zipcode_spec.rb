@@ -5,7 +5,7 @@ require 'spec_helper'
 		before do
 			@zipcode = Zipcode.new
 			@zipcode.save
-	it "should show recent 311 complaints" do
+		it "should show recent 311 complaints" do
 			@zipcode.should == true
 			end
 		end

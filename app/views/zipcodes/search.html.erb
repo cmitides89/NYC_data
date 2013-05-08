@@ -1,0 +1,21 @@
+<h1> 311 calls Search </h1>
+<table>
+
+<% @results.each do |i| %>
+
+	<tr>
+			<td><%= i["city"] %></td>
+			<td><%= i["created_date"] %></td>
+			<td><%= i["incident_zip"] %></td>
+			<td><%= i["complaint_type"] %></td>
+			<td><%= i["descriptor"] %></td>
+	</tr>
+
+<% end %>
+</table>
+
+
+
+<div class = "results">
+
+</div>

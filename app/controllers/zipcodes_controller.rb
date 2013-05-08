@@ -4,17 +4,15 @@ class ZipcodesController < ApplicationController
 		@results = Zipcode.display
 		respond_to do |format|
 		format.html do
-			render @zipcode
+			render @zipcode #< rendering zipcode partial
 			end
 
 		end
 	end
 
 
-
 	def search
-		@zipcode = Zipcode.query(params[:search])
-		redirect_to zipcodes_path
-	end
+		@results = Zipcode.query(params[:search])
+		end
 
 end
