@@ -14,27 +14,27 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2013-05-08T14:23:54-04:00">2013-05-08T14:23:54-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-05-08T16:03:07-04:00">2013-05-08T16:03:07-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">76.79%</span></span>
+    (<span class="covered_percent"><span class="red">72.58%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.95
+         0.91
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>15</b> files in total.
-    <b>56</b> relevant lines. 
-    <span class="green"><b>43</b> lines covered</span> and
-    <span class="red"><b>13</b> lines missed </span>
+    <b>62</b> relevant lines. 
+    <span class="green"><b>45</b> lines covered</span> and
+    <span class="red"><b>17</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -82,12 +82,12 @@
       
       <tr>
         <td class="strong"><a href="#3595586f7ff3d45a410c3a057853a20efe96bda5" class="src_link" title="app/controllers/zipcodes_controller.rb">app/controllers/zipcodes_controller.rb</a></td>
-        <td class="red strong">18.75 %</td>
-        <td>30</td>
-        <td>16</td>
+        <td class="red strong">33.33 %</td>
+        <td>20</td>
+        <td>9</td>
         <td>3</td>
-        <td>13</td>
-        <td>0.2</td>
+        <td>6</td>
+        <td>0.3</td>
       </tr>
       
       <tr>
@@ -192,12 +192,12 @@
       
       <tr>
         <td class="strong"><a href="#1501514ee993cde61aac481b87e681b4a56761a4" class="src_link" title="app/models/zipcode.rb">app/models/zipcode.rb</a></td>
-        <td class="green strong">100.0 %</td>
+        <td class="red strong">35.29 %</td>
+        <td>29</td>
+        <td>17</td>
         <td>6</td>
-        <td>4</td>
-        <td>4</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td>11</td>
+        <td>0.4</td>
       </tr>
       
     </tbody>
@@ -315,11 +315,11 @@
         <div class="source_table" id="3595586f7ff3d45a410c3a057853a20efe96bda5">
   <div class="header">
     <h3>app/controllers/zipcodes_controller.rb</h3>
-    <h4><span class="red">18.75 %</span> covered</h4>
+    <h4><span class="red">33.33 %</span> covered</h4>
     <div>
-      <b>16</b> relevant lines. 
+      <b>9</b> relevant lines. 
       <span class="green"><b>3</b> lines covered</span> and
-      <span class="red"><b>13</b> lines missed.</span>
+      <span class="red"><b>6</b> lines missed.</span>
     </div>
   </div>
   
@@ -347,160 +347,100 @@
         <li class="missed" data-hits="0" data-linenumber="4">
           
           
-          <code class="ruby">		response = HTTParty.get(&quot;http://data.cityofnewyork.us/resource/erm2-nwe9.json?$limit=5&amp;$select=city,complaint_type,incident_zip,created_date&amp;$order=created_date&quot;)</code>
+          <code class="ruby">		@results = Zipcode.display</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="5">
           
           
-          <code class="ruby">		@created = []</code>
+          <code class="ruby">		respond_to do |format|</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="6">
           
           
-          <code class="ruby">		@city = []</code>
+          <code class="ruby">		format.html do</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="7">
           
           
-          <code class="ruby">		@zip = []</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="8">
-          
-          
-          <code class="ruby">		@complaint = []</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="9">
-          
-          
-          <code class="ruby">		response.each do |x|</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="10">
-          
-          
-          <code class="ruby">			@created &lt;&lt; x[&quot;created_date&quot;]</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="11">
-          
-          
-          <code class="ruby">			@city &lt;&lt; x[&quot;city&quot;]</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="12">
-          
-          
-          <code class="ruby">			@zip &lt;&lt; x[&quot;incident_zip&quot;]</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="13">
-          
-          
-          <code class="ruby">			@complaint &lt;&lt; x[&quot;complaint_type&quot;]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="14">
-          
-          
-          <code class="ruby">		end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
-          
-          
-          <code class="ruby">		# @zipcode = Zipcode.find(params[:zipcode])</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="16">
-          
-          
-          <code class="ruby">		respond_to do |format|</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="17">
-          
-          
-          <code class="ruby">		format.html do</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="18">
-          
-          
           <code class="ruby">			render @zipcode</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">			end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">		end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">	end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
+        <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
           <code class="ruby">	def search</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="missed" data-hits="0" data-linenumber="16">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">		@zipcode = Zipcode.query(params[:search])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="missed" data-hits="0" data-linenumber="17">
+          
+          
+          <code class="ruby">		redirect_to zipcodes_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby">	end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">end</code>
@@ -981,11 +921,11 @@
         <div class="source_table" id="1501514ee993cde61aac481b87e681b4a56761a4">
   <div class="header">
     <h3>app/models/zipcode.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">35.29 %</span> covered</h4>
     <div>
-      <b>4</b> relevant lines. 
-      <span class="green"><b>4</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>17</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>11</b> lines missed.</span>
     </div>
   </div>
   
@@ -1004,25 +944,163 @@
           <code class="ruby">  attr_accessible :name, :neighborhood_id</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
           <code class="ruby">  has_many :users</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
           <code class="ruby">	belongs_to :neighborhood</code>
         </li>
       
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">=begin</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">	This method takes in a zipcode from a search form and passes it into the api query</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">=end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def self.query(zipcode)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="10">
+          
+          
+          <code class="ruby">		response = HTTParty.get(&quot;http://data.cityofnewyork.us/resource/erm2-nwe9.json?incident_zip=#{zipcode}&amp;$limit=5&amp;$select=city,complaint_type,incident_zip,created_date&amp;$order=created_date&quot;)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="11">
+          
+          
+          <code class="ruby">		@created = []</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="12">
+          
+          
+          <code class="ruby">		@city = []</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="13">
+          
+          
+          <code class="ruby">		@zip = []</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="14">
+          
+          
+          <code class="ruby">		@complaint = []</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="15">
+          
+          
+          <code class="ruby">		response.each do |x| #&lt;-- pushing each individual comp</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="16">
+          
+          
+          <code class="ruby">			@created &lt;&lt; x[&quot;created_date&quot;]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="17">
+          
+          
+          <code class="ruby">			@city &lt;&lt; x[&quot;city&quot;]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="18">
+          
+          
+          <code class="ruby">			@zip &lt;&lt; x[&quot;incident_zip&quot;]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="19">
+          
+          
+          <code class="ruby">			@complaint &lt;&lt; x[&quot;complaint_type&quot;]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	def self.display</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="27">
+          
+          
+          <code class="ruby">		 HTTParty.get(&quot;http://data.cityofnewyork.us/resource/erm2-nwe9.json?incident_zip=10010&amp;$limit=5&amp;$select=city,complaint_type,incident_zip,created_date,descriptor&amp;$order=created_date%20DESC&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">end</code>

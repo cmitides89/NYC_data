@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 	describe Zipcode do
-		it {should belong_to :neighborhood}
 		describe "a zipcode" do
 		before do
 			@zipcode = Zipcode.new
