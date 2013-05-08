@@ -1,13 +1,14 @@
 <h1> 311 calls </h1>
 <table>
 
-<% (0..@created.length - 1).each do |i| %>
+<% @results.each do |i| %>
 
 	<tr>
-			<td><%= @city[i] %></td>
-			<td><%= @created[i] %></td>
-			<td><%= @zip[i] %></td>
-			<td><%= @complaint[i] %></td>
+			<td><%= i["city"] %></td>
+			<td><%= i["created_date"] %></td>
+			<td><%= i["incident_zip"] %></td>
+			<td><%= i["complaint_type"] %></td>
+			<td><%= i["descriptor"] %></td>
 	</tr>
 
 <% end %>
