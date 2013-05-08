@@ -1,8 +1,10 @@
 class ComplaintDatapoint < ActiveRecord::Base
   attr_accessible :zipcode_id
 
+ 	belongs_to :zipcode
+
   
-		def get_zipcode_data
+		def save_noise_complaint_data
 			file = File.join(Rails.root, 'app', 'assets', 'NYCOpenData', 'noise_complaints.json')
 			json = File.read(file)
 			noise_complaints = JSON.parse(json)
@@ -17,10 +19,7 @@ class ComplaintDatapoint < ActiveRecord::Base
 				complaint.address = complaint[17]
 				complaint.save
 			end
-
-
-
-  belongs_to :zipcode
+		end
 
 
 
