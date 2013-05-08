@@ -1,7 +1,7 @@
 class ZipcodesController < ApplicationController
 
 	def index
-		response = HTTParty.get("http://data.cityofnewyork.us/resource/erm2-nwe9.json?incident_zip=10010&$limit=5&$select=city,complaint_type,incident_zip,created_date&$order=created_date")
+		response = HTTParty.get("http://data.cityofnewyork.us/resource/erm2-nwe9.json?incident_zip=10010&$limit=5&$select=city,complaint_type,incident_zip,created_date&$order=created_date%20DESC")
 		@created = []
 		@city = []
 		@zip = []
