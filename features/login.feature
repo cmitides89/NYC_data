@@ -11,4 +11,4 @@ Feature: User sign up and registration
 	Scenario: A user logs in with valid information
 		Given I am on the login page
 		And I have already registered as "test@test.com"
-		When I login with email address "test@gmail.com"
+		When I login with email address "test@test.com"
