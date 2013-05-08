@@ -14,7 +14,6 @@ class ZipcodesController < ApplicationController
 
 	def search
 		@zipcode = Zipcode.query(params[:search])
-		binding.pry
 		redirect_to zipcodes_path
 	end
 
