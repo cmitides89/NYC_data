@@ -4,7 +4,7 @@ Feature: Noise complaint data presentation
 	I want to see noise complaint data specific to zipcodes in Manhattan
 
 	Scenario: A visitor sees noise_complaint data for their zipcode 
-		Given I am on the homepage
-		When I enter my zipcode "10011"
-		Then I should see noise complaint data specific to the zipcode entered
+		Given I have already registered with email "test@test.com" and zipcode "10011"
+		And I am on a the show page for zipcode "10011"
+		Then I should see noise complaint data specific to zipcode "10011"
 
