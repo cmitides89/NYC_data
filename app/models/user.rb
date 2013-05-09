@@ -17,6 +17,8 @@ class User < ActiveRecord::Base
   before_save :set_zipcode
 
   def set_zipcode 
-    self.zipcode = Zipcode.find_by_name(:postal_code)
+    self.zipcode_id = Zipcode.find_by_name(postal_code).id
   end
+
+
 end
