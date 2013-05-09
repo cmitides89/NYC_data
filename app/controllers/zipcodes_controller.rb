@@ -2,7 +2,10 @@ class ZipcodesController < ApplicationController
 
 
 	def index
-		@results = Zipcode.display
+		@user = User.find_by_id(2)
+		@user.zipcode
+		@user_zip = @user.postal_code
+		@results = Zipcode.display(@user_zip)
 		respond_to do |format|
 		format.html do
 			render @zipcode #< rendering zipcode partial

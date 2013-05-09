@@ -1,14 +1,12 @@
 require 'spec_helper'
 
-	describe Zipcode do
-		describe "a zipcode" do
+	describe "zipcode dashboard" do
+
 		before do
-			@zipcode = Zipcode.new
-			@zipcode.save
+			@zipcode = Zipcode.display
 		it "should show recent 311 complaints" do
 			@zipcode.should == true
 			end
-		end
 	end
 
 end
