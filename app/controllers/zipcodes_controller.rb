@@ -1,5 +1,6 @@
 class ZipcodesController < ApplicationController
 
+
 	def index
 		@results = Zipcode.display
 		respond_to do |format|

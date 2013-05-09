@@ -14,14 +14,14 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2013-05-08T16:11:37-04:00">2013-05-08T16:11:37-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-05-08T21:35:25-04:00">2013-05-08T21:35:25-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">84.91%</span></span>
+    (<span class="covered_percent"><span class="yellow">85.71%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
@@ -31,9 +31,9 @@
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>15</b> files in total.
-    <b>53</b> relevant lines. 
-    <span class="green"><b>45</b> lines covered</span> and
+    <b>14</b> files in total.
+    <b>56</b> relevant lines. 
+    <span class="green"><b>48</b> lines covered</span> and
     <span class="red"><b>8</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -71,23 +71,13 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#8dda18faa267f51601735f8640c56fb24c8e9ee5" class="src_link" title="app/controllers/users_controller.rb">app/controllers/users_controller.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
         <td class="strong"><a href="#3595586f7ff3d45a410c3a057853a20efe96bda5" class="src_link" title="app/controllers/zipcodes_controller.rb">app/controllers/zipcodes_controller.rb</a></td>
-        <td class="red strong">33.33 %</td>
-        <td>20</td>
-        <td>9</td>
+        <td class="red strong">37.5 %</td>
+        <td>19</td>
+        <td>8</td>
         <td>3</td>
-        <td>6</td>
-        <td>0.3</td>
+        <td>5</td>
+        <td>0.4</td>
       </tr>
       
       <tr>
@@ -182,12 +172,12 @@
       
       <tr>
         <td class="strong"><a href="#25916b75a61552d8ea21eb23b482f21777853fdf" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>7</td>
-        <td>5</td>
-        <td>5</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td class="yellow strong">90.0 %</td>
+        <td>22</td>
+        <td>10</td>
+        <td>9</td>
+        <td>1</td>
+        <td>0.9</td>
       </tr>
       
       <tr>
@@ -282,44 +272,14 @@
   </pre>
 </div>
       
-        <div class="source_table" id="8dda18faa267f51601735f8640c56fb24c8e9ee5">
-  <div class="header">
-    <h3>app/controllers/users_controller.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
-    <ol>
-      
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
-          
-          <code class="ruby">class UsersController &lt; ApplicationController</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="2">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-    </ol>
-  </pre>
-</div>
-      
         <div class="source_table" id="3595586f7ff3d45a410c3a057853a20efe96bda5">
   <div class="header">
     <h3>app/controllers/zipcodes_controller.rb</h3>
-    <h4><span class="red">33.33 %</span> covered</h4>
+    <h4><span class="red">37.5 %</span> covered</h4>
     <div>
-      <b>9</b> relevant lines. 
+      <b>8</b> relevant lines. 
       <span class="green"><b>3</b> lines covered</span> and
-      <span class="red"><b>6</b> lines missed.</span>
+      <span class="red"><b>5</b> lines missed.</span>
     </div>
   </div>
   
@@ -338,64 +298,64 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
           <code class="ruby">	def index</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="4">
+        <li class="missed" data-hits="0" data-linenumber="5">
           
           
           <code class="ruby">		@results = Zipcode.display</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="5">
+        <li class="missed" data-hits="0" data-linenumber="6">
           
           
           <code class="ruby">		respond_to do |format|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="6">
+        <li class="missed" data-hits="0" data-linenumber="7">
           
           
           <code class="ruby">		format.html do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
+        <li class="missed" data-hits="0" data-linenumber="8">
           
           
           <code class="ruby">			render @zipcode #&lt; rendering zipcode partial</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">			end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby">		end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby">	end</code>
+          <code class="ruby">		end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">	end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
@@ -419,28 +379,22 @@
         <li class="missed" data-hits="0" data-linenumber="16">
           
           
-          <code class="ruby">		@zipcode = Zipcode.query(params[:search])</code>
+          <code class="ruby">		@results = Zipcode.query(params[:search])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby">		redirect_to zipcodes_path #&lt; redirecting back to index until I add AJAX</code>
+          <code class="ruby">		end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
           
           
-          <code class="ruby">	end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="19">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">end</code>
@@ -861,11 +815,11 @@
         <div class="source_table" id="25916b75a61552d8ea21eb23b482f21777853fdf">
   <div class="header">
     <h3>app/models/user.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="yellow">90.0 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>10</b> relevant lines. 
+      <span class="green"><b>9</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -878,37 +832,127 @@
           <code class="ruby">class User &lt; ActiveRecord::Base</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="2">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="2">
           
-          <code class="ruby">  attr_accessible :neighborhood_id, :type, :zipcode_id, :email, :password, :name</code>
+          
+          <code class="ruby">  # Include default devise modules. Others available are:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
           
           
+          <code class="ruby">  # :token_authenticatable, :confirmable,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">  # :lockable, :timeoutable and :omniauthable</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  has_many :events</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
-          
-          <code class="ruby">	has_one :rating</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">	belongs_to :zipcode</code>
+          <code class="ruby">  devise :database_authenticatable, :registerable,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">         :recoverable, :rememberable, :trackable, :validatable</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">  # Setup accessible (or protected) attributes for your model</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  attr_accessible :email, :password, :password_confirmation, :remember_me</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  attr_accessible :neighborhood_id, :type, :zipcode_id, :email, :password, :name, :postal_code</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  has_many :events</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	has_one :rating</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	belongs_to :zipcode</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  before_save :set_zipcode</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def set_zipcode </code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="20">
+          
+          
+          <code class="ruby">    self.zipcode = Zipcode.find_by_name(:postal_code)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">end</code>
@@ -983,7 +1027,7 @@
         <li class="missed" data-hits="0" data-linenumber="9">
           
           
-          <code class="ruby">		response = HTTParty.get(&quot;http://data.cityofnewyork.us/resource/erm2-nwe9.json?incident_zip=#{zipcode}&amp;$limit=5&amp;$select=city,complaint_type,incident_zip,created_date&amp;$order=created_date&quot;)</code>
+          <code class="ruby">		HTTParty.get(&quot;http://data.cityofnewyork.us/resource/erm2-nwe9.json?incident_zip=#{zipcode}&amp;$limit=5&amp;$select=city,complaint_type,incident_zip,created_date&amp;$order=created_date%20DESC&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">

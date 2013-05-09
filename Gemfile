@@ -29,6 +29,10 @@ group :test do
 	gem 'launchy'
 end
 
+
+gem 'devise'
+
+
 group :development, :test do
 	gem 'rspec-rails', '~>2.0'
 	gem 'shoulda-matchers'
