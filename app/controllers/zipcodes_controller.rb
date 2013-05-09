@@ -2,8 +2,7 @@ class ZipcodesController < ApplicationController
 
 
 	def index
-		@user = User.find_by_id(2)
-		@user.zipcode
+		@user = User.find_by_email(current_user.email)
 		@user_zip = @user.postal_code
 		@results = Zipcode.display(@user_zip)
 		respond_to do |format|
@@ -17,6 +16,5 @@ class ZipcodesController < ApplicationController
 
 	def search
 		@results = Zipcode.query(params[:search])
-		end
-
+	end
 end
