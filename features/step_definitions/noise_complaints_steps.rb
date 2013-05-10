@@ -1,11 +1,15 @@
 Given(/^I have already registered with email "(.*?)" and zipcode "(.*?)"$/) do |email, zipcode|
-  User.create(:email => email, :zipcode => zipcode, :password => 'password', :password_confirmation => 'password')
+  @test_zip = Zipcode.create(:name => zipcode)
+  @user = User.create(:email => email, :zipcode_id => @test_zip.id, :password => 'password', :password_confirmation => 'password')
 end
 
-Given(/^I am on a the show page for zipcode "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Given(/^I am on the show page for zipcode "(.*?)"$/) do |zipcode|
+  @zip = Zipcode.find(1)
+  visit(zipcode_path(@zip))
 end
 
-Then(/^I should see noise complaint data specific to zipcode "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then(/^I should view noise complaint data specific to zipcode "(.*?)"$/) do |zipcode|
+  @zip = Zipcode.find("10040")
+  @zip.complaint_datapoints = ComplaintDatapoint.where("zipcode_id = 'zip.id'")
 end
+
