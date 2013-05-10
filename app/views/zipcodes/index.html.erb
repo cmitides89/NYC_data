@@ -1,22 +1,33 @@
 <div id = "main">
-<h1> Most Recent 311 calls </h1>
+	<h1> Most Recent 311 calls </h1>
 
 
-<table>
-	<% @results.each do |i| %>
+		<table>
+			<% @results.each do |i| %>
 
-		<%= render :partial => 'zipcodes/zipcode', :locals => {:i => i } %>
+				<%= render :partial => 'zipcodes/zipcode', :locals => {:i => i } %>
 
-	<% end %>
-</table>
+			<% end %>
+		</table>
 
-<%= render :partial => 'zipcodes/search' %>
+		<% if @comments %>
+
+			<% @comments.each do |comment| %>
+
+						<%= render comment %>
+
+					<% end %>
+		<% end %>
+		
+	<%= render :partial => 'comments/form' %>
+
+	<%= render :partial => 'zipcodes/search' %>
 
 
 
 
-<div class = "search">
+	<div class = "search">
 
-</div>
+	</div>
 
 </div>
