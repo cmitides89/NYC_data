@@ -1,3 +1,35 @@
 // Place all the styles related to the zipcodes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	background-image: url(image_path('New_York.jpg'));
+	background-size: cover; 
+
+}
+
+#main {
+
+	background-color: white;
+	margin: 0 auto;
+	width: 800px;
+	text-align: center;
+	border: 2px solid black;
+	margin-top: 100px;
+}
+
+table{
+	margin: 0 auto;
+}
+
+.search {
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid;
+	width: 600px
+}
+
+tr{
+	width: 800px;
+	height: 25px;
+}
