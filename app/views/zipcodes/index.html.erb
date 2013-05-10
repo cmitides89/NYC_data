@@ -9,16 +9,16 @@
 
 			<% end %>
 		</table>
+<div>
+		
 
-		<% if @comments %>
-
-			<% @comments.each do |comment| %>
+			<% Zipcode.first.comments.each do |comment| %>
 
 						<%= render comment %>
 
-					<% end %>
-		<% end %>
+			<% end %>
 		
+</div>
 	<%= render :partial => 'comments/form' %>
 
 	<%= render :partial => 'zipcodes/search' %>
