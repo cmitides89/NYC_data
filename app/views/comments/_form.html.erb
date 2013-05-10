@@ -1,11 +1,11 @@
 
 
-	<h3>New Comment</h3>
-
-<div class = "new-comment">
+	<h3 id = "new-comment">New Comment</h3>
 
 
-	<%= form_for(Comment.new(:user_id => @user.id, :zipcode_id => @user.zipcode_id)) do |f| %>
+
+
+	<%= form_for(Comment.new(:user_id => @user.id, :zipcode_id => @user.zipcode_id), :remote => true) do |f| %>
 
 <%=  f.hidden_field :user_id %>
 <%=  f.hidden_field :zipcode_id %>
@@ -22,4 +22,3 @@
 <% end %>
 
 
-</div>

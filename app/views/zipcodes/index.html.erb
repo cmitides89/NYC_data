@@ -11,14 +11,15 @@
 		</table>
 <div>
 		
-
+<div class = "new-comment">
 			<% Zipcode.first.comments.each do |comment| %>
 
 						<%= render comment %>
 
 			<% end %>
-		
 </div>
+</div>
+
 	<%= render :partial => 'comments/form' %>
 
 	<%= render :partial => 'zipcodes/search' %>
