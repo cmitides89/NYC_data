@@ -6,6 +6,7 @@ collection do
     post 'search'
   end
 end
+resources :comments, :only => [:index, :create, :destroy]
 
   devise_for :users
 
