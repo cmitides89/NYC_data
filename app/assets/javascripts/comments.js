@@ -4,10 +4,12 @@ $(document).ready(function(){
 
 $('body').bind('ajax:success', function(e, data) {
 	console.log(data);
-	
+	var itemId = $('<div>').append(data).children().first().data("zipcode-id");
+
+	console.log(itemId)
 
 
-	$('.new-comment').append(data);
+	$('.new-comment'+ itemId).append(data);
 
 		});
 

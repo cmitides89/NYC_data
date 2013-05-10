@@ -11,24 +11,24 @@
 		</table>
 <div>
 		
-<div class = "new-comment">
-			<% Zipcode.first.comments.each do |comment| %>
+	<div class = "new-comment-<%= @user.zipcode.id %>">
+				<% Zipcode.first.comments.each do |comment| %>
 
-						<%= render comment %>
+							<%= render comment %>
 
-			<% end %>
-</div>
-</div>
-
-	<%= render :partial => 'comments/form' %>
-
-	<%= render :partial => 'zipcodes/search' %>
-
-
-
-
-	<div class = "search">
-
+				<% end %>
 	</div>
+</div>
+
+		<%= render :partial => 'comments/form' %>
+
+		<%= render :partial => 'zipcodes/search' %>
+
+
+
+
+		<div class = "search">
+
+		</div>
 
 </div>

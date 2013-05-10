@@ -1,5 +1,4 @@
 
-<% @results.each do |x| %>
-$('.search').append('<%= escape_javascript(render :partial => 'zipcodes/zipcode', :locals => {:i => x} ) %>');
-// or  $('.search').append('<%= escape_javascript(render search_zipcodes(@search)) %>
+<% @results.each do |complaints| %>
+$('.search').append('<%= escape_javascript(render :partial => 'zipcodes/zipcode', :locals => {:i => complaints} ) %>');
 <% end %>
