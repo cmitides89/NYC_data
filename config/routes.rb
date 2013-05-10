@@ -8,7 +8,8 @@ collection do
 end
 resources :comments, :only => [:index, :create, :destroy]
 
-  devise_for :users
+  devise_for :residents
+  devise_for :officials
 
 
   # The priority is based upon order of creation:

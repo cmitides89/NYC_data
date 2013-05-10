@@ -1,4 +1,16 @@
+<div id = "nav">
+	<% if current_resident %>
+	<h1> Welcome Resident </h1>
+	<% elsif current_official %>
+	<h1> Welcome Official </h1>
+	<% end %>
+
+<%= link_to "Resident Login", new_resident_session_path %>
+
+</div>
+
 <div id = "main">
+
 	<h1> Most Recent 311 calls </h1>
 
 

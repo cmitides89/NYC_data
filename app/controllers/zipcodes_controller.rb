@@ -2,9 +2,14 @@ class ZipcodesController < ApplicationController
 
 
 	def index
-		@user = User.find_by_email(current_user.email)
+		if current_resident
+		@user = User.find_by_email(current_resident.email)
+		elsif current_official
+		@user = User.find_by_email(current_official.email)
+		end
 		@user_zip = @user.zipcode.name
-		@results = Zipcode.display(@user_zip)					
+		@results = Zipcode.display(@user_zip)
+
 		respond_to do |format|
 		format.html
 		format.json { render :json => @results }
