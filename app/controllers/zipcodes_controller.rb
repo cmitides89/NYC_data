@@ -22,4 +22,10 @@ class ZipcodesController < ApplicationController
 		@results = Zipcode.query(params[:search])
 		
 	end
+
+	def login
+		
+	end
+
+
 end

@@ -4,6 +4,7 @@ NYCdata::Application.routes.draw do
   resources :zipcodes do
 collection do
     post 'search'
+    get 'login'
   end
 end
 resources :comments, :only => [:index, :create, :destroy]
