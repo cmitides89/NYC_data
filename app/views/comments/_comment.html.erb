@@ -1,6 +1,6 @@
 <div class = "comment" >
-	<%= comment.body %>
-
+	<p><%= comment.body %></p>
+	<p><%= comment.user.email %></p>
 	<div class = "info">
 			<%= distance_of_time_in_words(comment.created_at, Time.now) %>
 	</div>

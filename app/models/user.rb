@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   has_many :events
 	has_one :rating
 	belongs_to :zipcode
- 
+  has_many :comments
   before_save :set_zipcode
 
   def set_zipcode 
