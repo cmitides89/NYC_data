@@ -3,4 +3,5 @@ class Comment < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :neighborhood
+  belongs_to :zipcode
 end
