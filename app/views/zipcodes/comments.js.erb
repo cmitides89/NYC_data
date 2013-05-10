@@ -1,0 +1,3 @@
+<% @results.each do |comment| %>
+$('.search').append('<%= escape_javascript(render :partial => 'zipcodes/zipcode', :locals => {:i => complaints} ) %>');
+<% end %>

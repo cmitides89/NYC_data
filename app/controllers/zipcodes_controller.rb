@@ -7,9 +7,9 @@ class ZipcodesController < ApplicationController
 		elsif current_official
 		@user = User.find_by_email(current_official.email)
 		end
+		@zipcode = @user.zipcode
 		@user_zip = @user.zipcode.name
-		@results = Zipcode.display(@user_zip)
-
+		# @results = Zipcode.display(@user_zip)
 		respond_to do |format|
 		format.html
 		format.json { render :json => @results }
@@ -20,11 +20,10 @@ class ZipcodesController < ApplicationController
 
 	def search
 		@results = Zipcode.query(params[:search])
-		
 	end
 
 	def login
-		
+
 	end
 
 

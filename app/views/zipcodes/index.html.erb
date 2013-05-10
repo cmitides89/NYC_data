@@ -15,21 +15,21 @@
 
 
 		<table>
-			<% @results.each do |i| %>
+			<%# @results.each do |i| %>
 
-				<%= render :partial => 'zipcodes/zipcode', :locals => {:i => i } %>
+				<%#= render :partial => 'zipcodes/zipcode', :locals => {:i => i } %>
 
-			<% end %>
+			<%# end %>
 		</table>
 <div>
 		
-	<div class = "new-comment-<%= @user.zipcode.id %>">
-				<% Zipcode.first.comments.each do |comment| %>
+			<div class = "comments">
+				<% @zipcode.comments.each do |comment| %>
 
 							<%= render comment %>
 
 				<% end %>
-	</div>
+			</div>
 </div>
 
 		<%= render :partial => 'comments/form' %>
