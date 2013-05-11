@@ -9,7 +9,8 @@ function createNoiseComplaintDonut(music_counter, banging_counter, talking_count
 			{label: "Car Music", value: car_music_counter},
 			{label: "Loud TV", value: tv_counter},
 			{label: "Car Horn", value: horn_counter}
-		]
+		],
+		colors: ["#981b1e","#8db600"]
 	});
 }
 

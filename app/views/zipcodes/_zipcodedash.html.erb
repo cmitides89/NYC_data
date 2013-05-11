@@ -1,13 +1,4 @@
-<div id = "nav">
-	<% if current_resident %>
-	<h1> Welcome Resident </h1>
-	<% elsif current_official %>
-	<h1> Welcome Official </h1>
-	<% end %>
 
-<%= link_to "Login/Signup", login_zipcodes_path %>
-
-</div>
 
 <div id = "main">
 
@@ -24,16 +15,16 @@
 <div>
 		
 			<div class = "comments">
-				<% @zipcode.comments.each do |comment| %>
+				<% @zip.comments.each do |comment| %>
 
 							<%= render comment %>
 
 				<% end %>
 			</div>
 </div>
-
+	<% if current_resident || current_official %>
 		<%= render :partial => 'comments/form' %>
-
+	<% end %>
 		<%= render :partial => 'zipcodes/search' %>
 
 
