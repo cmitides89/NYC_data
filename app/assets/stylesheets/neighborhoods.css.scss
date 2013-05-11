@@ -1,3 +1,38 @@
 // Place all the styles related to the neighborhoods controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html{width:100%; height:100%;}
+#map{
+	background:url(zipco.gif);
+   background-repeat:no-repeat;
+	height:800px;
+	width:400px;
+	margin-left:auto;
+	margin-right:auto;
+}
+#inwood{
+	margin-left:294px;
+	margin-top:80px;
+	height:3px;
+	width:13px;
+}
+#talkbubble {
+   width: 120px;
+   height: 80px;
+   background: red;
+   position: relative;
+   -moz-border-radius:    10px;
+   -webkit-border-radius: 10px;
+   border-radius:         10px;
+}
+#talkbubble:before {
+   content:"";
+   position: absolute;
+   right: 100%;
+   top: 26px;
+   width: 0;
+   height: 0;
+   border-top: 13px solid transparent;
+   border-right: 26px solid red;
+   border-bottom: 13px solid transparent;
+}
