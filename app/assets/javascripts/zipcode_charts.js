@@ -30,19 +30,6 @@ function createDrinkingChart(public_counter, underage_counter){
 	});
 }
 
-// function createRodentChart(rodent_counter){
-// 	new Morris.Bar({
-// 	  element: 'rodent-chart',
-// 	  data: [
-// 	    { y: 'This Zipcode', a: rodent_counter },
-// 	    { y: 'Manhattan Avg.', a: 333}
-// 	  ],
-// 	  xkey: 'y',
-// 	  ykeys: ['a'],
-// 	  labels: ['Number of rodent sightings']
-// 	});
-// }
-
 function createSqualorChart(rodent_counter, homeless_counter){
 	new Morris.Bar({
 	  element: 'squalor-chart',
