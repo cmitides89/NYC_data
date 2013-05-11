@@ -19,3 +19,6 @@
 /app/.DS_Store
 /app/assets/.DS_Store
 /app/assets/stylesheets/zipcodes.css.scss
+/app/helpers/zipcodes_helper.rb
+/test/functional/zipcodes_controller_test.rb
+/test/unit/helpers/zipcodes_helper_test.rb
