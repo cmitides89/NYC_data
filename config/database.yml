@@ -5,10 +5,12 @@
 #   gem 'sqlite3'
 development:
   adapter: postgresql
+
+  username: dinom829
+  password:
   host: localhost
-  database: nycdata_development 
-  username: kbajorin
-  password: 
+  database: nycdata_development
+
   pool: 5
   timeout: 5000
 
@@ -19,7 +21,7 @@ test: &test
   adapter: postgresql
   host: localhost
   database: nycdata_development 
-  username: kbajorin
+  username: dinom829
   password: 
   pool: 5
   timeout: 5000
@@ -28,7 +30,7 @@ production:
   adapter: postgresql
   host: localhost
   database: nycdata_development 
-  username: kbajorin
+  username: dinom829
   password: 
   pool: 5
   timeout: 5000
