@@ -9,7 +9,7 @@ class ZipcodesController < ApplicationController
 		end
 		@zipcode = @user.zipcode
 		@user_zip = @user.zipcode.name
-		# @results = Zipcode.display(@user_zip)
+		@results = Zipcode.display(@user_zip)
 		respond_to do |format|
 		format.html
 		format.json { render :json => @results }

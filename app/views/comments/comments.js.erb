@@ -1,4 +1,4 @@
 
 
-$('.comments').append("<%= j(render :partial => 'comments/comment', :locals => {:comment => @comment} ) %>");
+$('.comments').append("<%= j(render :partial => 'comments/comment', :locals => {:comment => @comment} ) %>").hide().fadeIn();
 
