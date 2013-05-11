@@ -1,4 +1,13 @@
+<div id = "nav">
+	<% if current_resident %>
+	<h1> Welcome Resident </h1>
+	<% elsif current_official %>
+	<h1> Welcome Official </h1>
+	<% end %>
 
+<%= link_to "Login/Signup", login_zipcodes_path %>
+
+</div>
 
 <div id = "main">
 
