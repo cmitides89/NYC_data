@@ -7,4 +7,7 @@ class Neighborhood < ActiveRecord::Base
 	has_many :events
 	has_many :zipcodes
 	has_many :complaint_datapoints, :through => :zipcode
+
+
+	
 end
