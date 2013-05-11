@@ -1,0 +1,46 @@
+<div id = "nav">
+	<% if current_resident %>
+	<h1> Welcome Resident </h1>
+	<% elsif current_official %>
+	<h1> Welcome Official </h1>
+	<% end %>
+
+<%= link_to "Login/Signup", login_zipcodes_path %>
+
+</div>
+
+<div id = "main">
+
+	<h1> Most Recent 311 calls </h1>
+
+
+		<table>
+			<% @results.each do |i| %>
+
+				<%= render :partial => 'zipcodes/zipcode', :locals => {:i => i } %>
+
+			<% end %>
+		</table>
+<div>
+		
+			<div class = "comments">
+				<% @zipcode.comments.each do |comment| %>
+
+							<%= render comment %>
+
+				<% end %>
+			</div>
+</div>
+
+		<%= render :partial => 'comments/form' %>
+
+		<%= render :partial => 'zipcodes/search' %>
+
+
+
+
+		<div class = "search">
+
+		</div>
+
+</div>
