@@ -13,3 +13,47 @@ function createNoiseComplaintDonut(music_counter, banging_counter, talking_count
 	});
 }
 
+function createDrinkingChart(public_counter, underage_counter){
+	new Morris.Bar({
+		element: "drinking-chart",
+		data: [
+			{ y: 'In Public', a: public_counter, b: 13 },
+			{ y: 'Underage', a: underage_counter,  b: 6 }
+
+			// { y: 'In Public', a: public_counter, b: 13 },
+			// { y: 'Underage', a: underage_counter,  b: 6 }
+    ],
+    hidehover: 'false',
+    xkey: 'y',
+    ykeys: ['a', 'b'],
+    labels: ['This Zipcode', 'Manhattan Avg.']
+	});
+}
+
+// function createRodentChart(rodent_counter){
+// 	new Morris.Bar({
+// 	  element: 'rodent-chart',
+// 	  data: [
+// 	    { y: 'This Zipcode', a: rodent_counter },
+// 	    { y: 'Manhattan Avg.', a: 333}
+// 	  ],
+// 	  xkey: 'y',
+// 	  ykeys: ['a'],
+// 	  labels: ['Number of rodent sightings']
+// 	});
+// }
+
+function createSqualorChart(rodent_counter, homeless_counter){
+	new Morris.Bar({
+	  element: 'squalor-chart',
+	  data: [
+	    { y: 'Rodents', a: rodent_counter, b: 333 },
+	    { y: 'Homeless Encampments', a: homeless_counter, b: 70}
+	  ],
+	  xkey: 'y',
+    ykeys: ['a', 'b'],
+    labels: ['This Zipcode', 'Manhattan Avg.']
+	});
+}
+
+

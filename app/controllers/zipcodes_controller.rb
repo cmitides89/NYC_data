@@ -1,8 +1,8 @@
 class ZipcodesController < ApplicationController
 
 	def show
-		zip = Zipcode.find(params[:id])
-		noise_complaints = ComplaintDatapoint.where("zipcode_id = ?", params[:id])
+		@zip = Zipcode.find(params[:id])
+		noise_complaints = ComplaintDatapoint.where("zipcode_id = ? AND complaint_type = ?", params[:id], "Noise - Commercial")
 		@music_counter = 0
 		@banging_counter = 0
 		@talking_counter = 0
@@ -24,6 +24,40 @@ class ZipcodesController < ApplicationController
 					@tv_counter += 1
 				when "Car/Truck Horn"
 					@horn_counter += 1
+				else
+			end
+		end
+
+		drinking_complaints = ComplaintDatapoint.where("zipcode_id = ? AND complaint_type = ?", params[:id], "Drinking")
+		@public_counter = 0
+		@underage_counter = 0
+		drinking_complaints.each do |complaint|
+			case complaint.descriptor
+				when "In Public"
+					@public_counter += 1
+				when "Underage - Licensed Est"
+					@underage_counter += 1
+				else
+			end
+
+		end
+
+		rodent_complaints = ComplaintDatapoint.where("zipcode_id = ? AND complaint_type = ?", params[:id], "Rodent")
+		@rodent_counter = 0
+		rodent_complaints.each do |complaint|
+			case complaint.complaint_type
+				when "Rodent"
+					@rodent_counter += 1
+				else
+			end
+		end
+
+		homeless_complaints = ComplaintDatapoint.where("zipcode_id = ? AND complaint_type = ?", params[:id], "Homeless Encampment")
+		@homeless_counter = 0
+		homeless_complaints.each do |complaint|
+			case complaint.complaint_type
+				when "Homeless Encampment"
+					@homeless_counter += 1
 				else
 			end
 		end
