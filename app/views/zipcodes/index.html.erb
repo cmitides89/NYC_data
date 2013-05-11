@@ -13,7 +13,7 @@
 			<% end %>
 		</table>
 <div>
-		
+		<% if @zipcode.comments != nil %>
 			<div class = "comments">
 				<% @zipcode.comments.each do |comment| %>
 
@@ -21,6 +21,7 @@
 
 				<% end %>
 			</div>
+		<% end %>
 </div>
 
 		<%= render :partial => 'comments/form' %>
