@@ -4,7 +4,10 @@
 	<% elsif current_official %>
 	<h1> Welcome Official </h1>
 	<% end %>
-
+	<h1 id = "complaint">Complaint Form</h1>
+	<%= render :partial => 'zipcodes/complaint_form' %>
+<div id = "login_form" style = "width: 600px; height: 1000px; background-color:white; ">
+</div>
 <%= link_to "Login/Signup", login_zipcodes_path %>
 
 </div>
@@ -15,6 +18,6 @@
 <div style = "float:right;">
 	
 <%= render :partial => 'zipcodes/zipcodedash' %>
-<%= render :partial => 'zipcodes/complaint_form' %>
+
 
 </div>
