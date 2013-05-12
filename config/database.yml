@@ -5,7 +5,6 @@
 #   gem 'sqlite3'
 development:
   adapter: postgresql
-
   username: kbajorin
   password:
   host: localhost
@@ -18,19 +17,19 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test: &test
-  adapter: kbajorin
+  adapter: postgresql
   host: localhost
   database: nycdata_development 
-  username: dinom829
+  username: kbajorin
   password: 
   pool: 5
   timeout: 5000
 
 production:
-  adapter: kbajorin
+  adapter: postgresql
   host: localhost
   database: nycdata_development 
-  username: dinom829
+  username: kbajorin
   password: 
   pool: 5
   timeout: 5000

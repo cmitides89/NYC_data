@@ -1,4 +1,9 @@
 <%= @zip.name %>
+<div id="map-canvas"></div>
 <%= render "noise_chart" %>
 <%= render "drinking_chart" %>
 <%= render "squalor_chart" %>
+
+<script>
+	initMap(<%= @zip.latitude %>, <%= @zip.longitude %>)
+</script>
