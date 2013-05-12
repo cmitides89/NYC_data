@@ -13,7 +13,7 @@ class Zipcode < ActiveRecord::Base
 	end
 
 	def self.find_zip_data
-		file = File.join(Rails.root, 'app', 'assets', 'NYCOpenData', 'drinking.json')
+		file = File.join(Rails.root, 'app', 'assets', 'NYCOpenData', 'homeless.json')
 		json = File.read(file)
 		noise_complaints = JSON.parse(json)
 		noise_complaints = noise_complaints["data"]
