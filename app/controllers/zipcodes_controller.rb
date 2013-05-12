@@ -9,6 +9,7 @@ class ZipcodesController < ApplicationController
 		if current_official || current_resident
 		@zipcode = @user.zipcode
 		@user_zip = @user.zipcode.name
+
 		end
 		respond_to do |format|
 			format.html
@@ -37,6 +38,11 @@ class ZipcodesController < ApplicationController
 		@zipcode = @user.zipcode
 		@user_zip = @user.zipcode.name
 		end
+
+          # Tell the UserMailer to send a welcome Email after save
+        @email = UserMailer.complaint_email(@user)
+        @email.deliver
+ 
 		@results = Zipcode.display(@zip.name)
 		noise_complaints = ComplaintDatapoint.where("zipcode_id = ? AND complaint_type = ?", params[:id], "Noise - Commercial")
 		@music_counter = 0
