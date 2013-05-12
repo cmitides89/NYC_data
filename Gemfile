@@ -34,6 +34,7 @@ end
 
 gem 'devise'
 gem 'json'
+gem 'geocoder'	
 
 
 group :development, :test do
