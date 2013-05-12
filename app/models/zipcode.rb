@@ -14,9 +14,8 @@ class Zipcode < ActiveRecord::Base
 		 HTTParty.get("http://data.cityofnewyork.us/resource/erm2-nwe9.json?incident_zip=#{zipcode.to_i}&$limit=5&$select=city,complaint_type,incident_zip,created_date,descriptor,incident_address,location_type&$order=created_date%20DESC")
 	end
 
-
-	def self.find_complaints_data
-		file = File.join(Rails.root, 'app', 'assets', 'NYCOpenData', 'rodents.json')
+	def self.find_zip_data
+		file = File.join(Rails.root, 'app', 'assets', 'NYCOpenData', 'drinking.json')
 		json = File.read(file)
 		noise_complaints = JSON.parse(json)
 		noise_complaints = noise_complaints["data"]
