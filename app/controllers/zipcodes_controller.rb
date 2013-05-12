@@ -40,8 +40,8 @@ class ZipcodesController < ApplicationController
 		end
 
           # Tell the UserMailer to send a welcome Email after save
-        @email = UserMailer.complaint_email(@user)
-        @email.deliver
+        # @email = UserMailer.complaint_email(@user)
+        # @email.deliver
  
 		@results = Zipcode.display(@zip.name)
 		noise_complaints = ComplaintDatapoint.where("zipcode_id = ? AND complaint_type = ?", params[:id], "Noise - Commercial")

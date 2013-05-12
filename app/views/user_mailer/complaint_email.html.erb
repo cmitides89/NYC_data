@@ -4,10 +4,9 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-    <h1>A resident thinks you suck, <%= @user.email %></h1>
-    <p>
-      To login to the site, just follow this link: <%= @url %>.
-    </p>
-  
-  </body>
+    <h1>A resident has submitted a complaint, <%= @user.email %></h1>
+
+    <p> <%= @message %></p>
+    
+  </body>	
 </html>
