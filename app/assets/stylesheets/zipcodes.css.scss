@@ -19,13 +19,31 @@ body {
 #main {
 	margin: 0 auto;
 	text-align: center;
-	height: 300px;
+	//height: 300px;
 	width: 100%;
+	//margin-top: 100px;
+	//height: 1200px;
+	z-index: 0;
 }
 
-table{
-	margin: 0 auto;
+#main table{
+	margin: 0 10% 0 10%;
+
 }
+
+#main tr{
+	height: 25px;
+}
+
+	#main td {
+		padding: 0 10px 0 10px;
+	}
+
+		#main td:first-child {
+			width: 80px;
+		}
+
+
 
 .search {
 	width: 210px;
@@ -37,20 +55,14 @@ table{
 	vertical-align: middle;
 }
 
-#main tr{
-	height: 25px;
-}
-
-	#main td {
-		padding: 0 10px 0 10px;
-	}
-
 #nav{
-	//width: 100%;
+	//position: fixed;
 	top: 0;
 	left: 0;
-	height: 150px;
-	background-color: white;
+	height: 100px;
+	background-color: black;
+	z-index: 0;
+	text-align:center;
 }
 
 .animation {
@@ -64,4 +76,11 @@ table{
 
 .chart-title {
 	text-align: center;
+}
+
+.logout {
+	margin-right: -200px;
+}
+.aggregate {
+	z-index: 0;
 }

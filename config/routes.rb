@@ -8,10 +8,10 @@ collection do
   end
 end
 resources :comments, :only => [:index, :create, :destroy]
-
   devise_for :residents
   devise_for :officials
-
+  resources :users
+match '/contact_email', :to => 'users#sendmail'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
