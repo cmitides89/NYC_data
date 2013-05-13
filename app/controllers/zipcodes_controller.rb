@@ -22,7 +22,7 @@ class ZipcodesController < ApplicationController
 	end
 
 	def login
-
+		
 	end
 	
 	def show
@@ -103,8 +103,12 @@ class ZipcodesController < ApplicationController
 				else
 			end
 		end
-
-		render 'show'
+		respond_to do |format|
+			format.html {render 'show'}
+			format.json { render :template => 'users/login' }
+		end	
+		
+		
 	end
 
 end
