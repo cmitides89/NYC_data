@@ -5,7 +5,7 @@ class Zipcode < ActiveRecord::Base
 	has_many :complaint_datapoints
 	has_many :comments
 
-	#geocoded_by :name
+	geocoded_by :name
 
 	def self.query(zipcode) #< zipcode gets put into query and returns most recent 311 calls from that zipcode
 		HTTParty.get("http://data.cityofnewyork.us/resource/erm2-nwe9.json?incident_zip=#{zipcode}&$limit=5&$select=city,complaint_type,incident_zip,created_date&$order=created_date%20DESC")
@@ -15,12 +15,8 @@ class Zipcode < ActiveRecord::Base
 	end
 
 	def self.find_zip_data
-<<<<<<< HEAD
 
-		file = File.join(Rails.root, 'app', 'assets', 'NYCOpenData', 'homeless.json')
-
-=======
-		
+		file = File.join(Rails.root, 'app', 'assets', 'NYCOpenData', 'drinking.json')
 		json = File.read(file)
 		noise_complaints = JSON.parse(json)
 		noise_complaints = noise_complaints["data"]

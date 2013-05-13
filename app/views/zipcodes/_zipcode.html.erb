@@ -1,11 +1,5 @@
-
-
-	<tr>
-	<!-- 		<td><%#= i["city"] %></td> -->
-			<td><%= distance_of_time_in_words_to_now(i["created_date"]) %></td>
-			<td><%= i["incident_zip"] %></td>
-			<td><%= i["complaint_type"] %></td>
-			<td><%= i["descriptor"] %></td>
-			<td><%= i["location_type"] %></td>
-			<td><%= i["incident_address"] %></td>
-	</tr>
+<tr>
+	<td><%= distance_of_time_in_words_to_now(i["created_date"]) %> ago</td>
+	<td><%= i["descriptor"] %></td>
+	<td><%= i["incident_address"] %></td>
+</tr>

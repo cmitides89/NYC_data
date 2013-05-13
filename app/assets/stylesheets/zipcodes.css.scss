@@ -7,60 +7,87 @@ body {
 	background-size: cover; 
 
 }
+.container {
+	background-color: white;
+}
 
 #map-canvas {
-	width: 100%;
+	width: 300px;
 	height: 300px;
 }
 
 #main {
-
-	background-color: white;
 	margin: 0 auto;
-	width: 800px;
 	text-align: center;
 	border: 2px solid black;
-	margin-top: 100px;
-	height: 1200px;
-
+	//height: 300px;
+	width: 100%;
+	//margin-top: 100px;
+	//height: 1200px;
 	z-index: 0;
+	float: left;
+}
+
+#main table{
+	margin: 0 10% 0 10%;
 
 
 }
 
-table{
-	margin: 0 auto;
-}
-
-.search {
-	margin: 0 auto;
-	text-align: center;
-	border: 1px solid;
-	width: 600px;
-}
-
-tr{
-	width: 800px;
+#main tr{
 	height: 25px;
 }
 
+	#main td {
+		padding: 0 10px 0 10px;
+	}
+
+		#main td:first-child {
+			width: 80px;
+		}
+
+
+
+.search {
+	width: 210px;
+	margin: auto auto;
+	line-height: 200px;
+}
+
+.search input {
+	vertical-align: middle;
+}
+
 #nav{
-	position: fixed;
-	width: 100%;
+	//position: fixed;
 	top: 0;
 	left: 0;
 	height: 100px;
 	background-color: black;
 	z-index: 0;
 	text-align:center;
-
-
 }
 
 .animation {
 	color: red;
 }
 
+#aggregate-data-title {
+	text-align: center;
+	margin-top: 1em;
+}
+
+.chart-title {
+	text-align: center;
+}
+
 .logout {
 	margin-right: -200px;
+}
+.aggregate {
+	z-index: 0;
+}
+.sixteen{
+	background-color: white;
+	width: 800px;
 }
