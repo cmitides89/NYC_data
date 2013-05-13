@@ -18,3 +18,7 @@ FATAL:  database "nycdata_development" does not exist
 FATAL:  database "nycdata_development" does not exist
 FATAL:  database "nycdata_development" does not exist
 FATAL:  role "dinom829" does not exist
+LOG:  database system was shut down at 2013-05-13 01:05:15 EDT
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+FATAL:  role "kbajorin" does not exist

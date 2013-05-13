@@ -9,7 +9,7 @@ $(document).ready(function() {
      $(".sign_up").click(function(){
         $("#signup").fadeToggle();
 
- 
+
      });
 
      $("#signup").hide();
