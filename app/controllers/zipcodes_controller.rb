@@ -9,6 +9,7 @@ class ZipcodesController < ApplicationController
 		if current_official || current_resident
 		@zipcode = @user.zipcode
 		@user_zip = @user.zipcode.name
+
 		end
 		respond_to do |format|
 			format.html
@@ -21,22 +22,27 @@ class ZipcodesController < ApplicationController
 	end
 
 	def login
-
+		
 	end
 	
 	def show
-	
 		@zip = Zipcode.find(params[:id])
 			
-			if current_resident
+		if current_resident
 			@user = User.find_by_email(current_resident.email)
 		elsif current_official
 			@user = User.find_by_email(current_official.email)
 		end
+		
 		if current_official || current_resident
-		@zipcode = @user.zipcode
-		@user_zip = @user.zipcode.name
+			@zipcode = @user.zipcode
+			@user_zip = @user.zipcode.name
 		end
+
+          # Tell the UserMailer to send a welcome Email after save
+        # @email = UserMailer.complaint_email(@user)
+        # @email.deliver
+ 
 		@results = Zipcode.display(@zip.name)
 		noise_complaints = ComplaintDatapoint.where("zipcode_id = ? AND complaint_type = ?", params[:id], "Noise - Commercial")
 		@music_counter = 0
@@ -98,7 +104,10 @@ class ZipcodesController < ApplicationController
 			end
 		end
 
+
+
 		render 'show'
+
 	end
 
 end
