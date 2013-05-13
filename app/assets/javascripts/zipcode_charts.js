@@ -33,12 +33,12 @@ function createDrinkingChart(public_counter, underage_counter){
 
 function createSqualorChart(rodent_counter, homeless_counter){
 	new Morris.Bar({
-	  element: 'squalor-chart',
-	  data: [
-	    { y: 'Rodents', a: rodent_counter, b: 333 },
-	    { y: 'Homeless Encampments', a: homeless_counter, b: 70}
-	  ],
-	  xkey: 'y',
+		element: 'squalor-chart',
+		data: [
+			{ y: 'Rodents', a: rodent_counter, b: 333 },
+			{ y: 'Homeless Encampments', a: homeless_counter, b: 70}
+		],
+		xkey: 'y',
     ykeys: ['a', 'b'],
     labels: ['This Zipcode', 'Manhattan Avg.']
 	});

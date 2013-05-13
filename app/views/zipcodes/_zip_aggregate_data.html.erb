@@ -1,8 +1,15 @@
-<%= @zip.name %>
-<div id="map-canvas"></div>
-<%= render "noise_chart" %>
-<%= render "drinking_chart" %>
-<%= render "squalor_chart" %>
+<h2 id = "aggregate-data-title">How Shitty Is This Neighborhood?</h2>
+<div class = "ten columns">
+	<div class = "five columns alpha">
+		<%= render "noise_chart" %>
+	</div>
+	<div class = "five columns" %>
+		<%= render "drinking_chart" %>
+	</div>
+</div>
+<div class = "six columns">
+	<%= render "squalor_chart" %>
+</div>
 
 <script>
 	initMap(<%= @zip.latitude %>, <%= @zip.longitude %>)

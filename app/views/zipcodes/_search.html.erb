@@ -1,6 +1,5 @@
 <%= form_tag(search_zipcodes_path, :remote => true) do %>
-  <%= label_tag(:search, "Search for:") %>
-  <%= text_field_tag(:search) %>
-  <%= submit_tag("Search") %>
+  <%#= label_tag(:search, "Search for:") %>
+  <%= text_field_tag(:search, nil, :placeholder => "Enter call type for search...") %>
 <% end %>
 

@@ -1,38 +1,30 @@
 
 
 <div id = "main">
-
-	<h1> Most Recent 311 calls </h1>
-
-
-		<table>
-			<% @results.each do |i| %>
-
-				<%= render :partial => 'zipcodes/zipcode', :locals => {:i => i } %>
-
-			<% end %>
-		</table>
+	<h3> Most Recent 311 calls for <%= @zip.name %></h3>
+	<table>
+		<tr>
+			<th>Time Submitted</th>
+			<th>Complaint Type</th>
+			<th>Address</th>
+		</tr>
+		<% @results.each do |i| %>
+			<%= render :partial => 'zipcodes/zipcode', :locals => {:i => i } %>
+		<% end %>
+	</table>
 <div>
 		
-			<div class = "comments">
-				<% @zip.comments.each do |comment| %>
-
-							<%= render comment %>
-
-				<% end %>
-			</div>
+<div class = "comments">
+	<% @zip.comments.each do |comment| %>
+				<%= render comment %>
+	<% end %>
 </div>
-	<% if current_resident || current_official and @user.zipcode_id == @zip.id %>
 
+<div>
+	<% if current_resident || current_official and @user.zipcode_id == @zip.id %>
 		<%= render :partial => 'comments/form' %>
 	<% end %>
-		<%= render :partial => 'zipcodes/search' %>
-
-
-
-
-		<div class = "search">
-
+		<div class="search">	
+			<%= render :partial => 'zipcodes/search' %>
 		</div>
-
 </div>

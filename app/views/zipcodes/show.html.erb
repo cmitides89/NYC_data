@@ -1,5 +1,5 @@
 
-<div class = "sixteen columns">
+<div class = "sixteen columns clearfix">
 	<div id = "nav">
 		<% if current_resident %>
 		<h1> Welcome Resident </h1>
@@ -8,13 +8,22 @@
 		<% end %>
 		<%= link_to "Login/Signup", login_zipcodes_path %>
 	</div>
+</div>
 
-	<div class="six columns alpha" style = "background-color:white;"> 
-	<!-- <div style = "width: 600px; height: 1000px; background-color:white; float:left; margin-top: 100px;"> -->
-		<%= render "zip_aggregate_data" %>
+<div class = "sixteen columns clearfix">
+
+	<div class = "seven columns alpha">
+		<div id="map-canvas"></div>
 	</div>
 
-	<div class = "ten columns omega">
+	<div class = "nine columns omega" >
 		<%= render 'zipcodedash' %>
-	</div>
+	</div>	
+
+</div>
+<!-- </div>
+</div> -->
+
+<div class="sixteen columns clearfix" style = "background-color:white;">
+	<%= render "zip_aggregate_data" %>
 </div>
