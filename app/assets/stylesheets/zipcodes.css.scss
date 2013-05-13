@@ -22,7 +22,7 @@ body {
 	border: 2px solid black;
 	margin-top: 100px;
 	height: 1200px;
-	z-index: 1;
+
 }
 
 table{
@@ -47,6 +47,7 @@ tr{
 	left: 0;
 	height: 150px;
 	background-color: white;
+	z-index:0;
 }
 
 .animation {
