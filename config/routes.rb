@@ -10,7 +10,7 @@ end
 resources :comments, :only => [:index, :create, :destroy]
   devise_for :residents
   devise_for :officials
-resources :users
+  resources :users
 match '/contact_email', :to => 'users#sendmail'
 
   # The priority is based upon order of creation:

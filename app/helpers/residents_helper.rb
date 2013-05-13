@@ -1,0 +1,3 @@
+module ResidentsHelper
+
+end

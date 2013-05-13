@@ -1,6 +1,7 @@
 module UsersHelper
 
-def resource_name
+module ResidentsHelper
+	def resource_name
     :resident
   end
  
@@ -12,5 +13,7 @@ def resource_name
     @devise_mapping ||= Devise.mappings[:resident]
   end
 
+
+end
 
 end
