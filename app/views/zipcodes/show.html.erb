@@ -26,7 +26,7 @@
   <%= link_to('Logout', destroy_official_session_path, :method => :delete) %>        
 
 <% end %>
-</div>
+
 
 
 <% if current_resident || current_official %>
@@ -44,7 +44,7 @@
 	<%= render :partial => 'officials/official_signup' %>
 
 	<% end %>
-
+</div>
 
 <div style = "width: 600px; height: 1000px; background-color: white;float:left; margin-top: 100px; z-index: 1; margin: 0 auto;" >
 <%= render "zip_aggregate_data" %>
