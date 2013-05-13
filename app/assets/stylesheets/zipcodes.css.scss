@@ -23,6 +23,7 @@ body {
 	margin-top: 100px;
 	height: 1200px;
 	z-index: 0;
+
 }
 
 table{
@@ -42,14 +43,22 @@ tr{
 }
 
 #nav{
+	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
-	height: 150px;
-	background-color: white;
-	z-index:0;
+	height: 100px;
+	background-color: black;
+	z-index: 0;
+	text-align:center;
+
+
 }
 
 .animation {
 	color: red;
+}
+
+.logout {
+	margin-right: -200px;
 }
