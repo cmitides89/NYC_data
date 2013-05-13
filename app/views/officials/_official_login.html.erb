@@ -1,18 +1,17 @@
-<<<<<<< HEAD
+
 <div id = "official_signin"style =  "width: 600px; height: 400px; background-color:black; color:white; z-index: 0; top: 0; margin-left: 400px; position: absolute;" >
-=======
 
 
 <h2>Official Sign in</h2>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+<%= form_for(resource2, :as => resource_name2, :url => session_path(resource_name2)) do |f| %>
   <div><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
 
   <div><%= f.label :password %><br />
   <%= f.password_field :password %></div>
 
-  <% if devise_mapping.rememberable? -%>
+  <% if devise_mapping2.rememberable? -%>
     <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
   <% end -%>
 
