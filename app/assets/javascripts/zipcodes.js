@@ -5,6 +5,16 @@ $('tr').each(function(i){
     setTimeout(function(){ t.addClass('animation'); }, (i+1) * 400);
 });
 
+	
+     $("#complaint").click(function(){
+        $("#complaint_form").slideToggle();
+  
+
+      });
+     $("#complaint_form").hide();
+
+
+
 
 
 

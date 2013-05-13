@@ -1,20 +1,56 @@
 <div id = "nav">
 	<% if current_resident %>
-	<h1> Welcome Resident </h1>
+		<h1> Welcome Resident </h1>
 	<% elsif current_official %>
-	<h1> Welcome Official </h1>
+		<h1> Welcome Official </h1>
 	<% end %>
+<% if current_resident %>
+	<h1 id = "complaint" style = "float:left;">Complaint Form</h1>
+		<%= render :partial => 'zipcodes/complaint_form' %>
+<% end %>
+	
 
-	<%= link_to "Login/Signup", login_zipcodes_path %>
 
+<% if resident_signed_in? %>
+ 
+  <%= link_to('Logout', destroy_resident_session_path, :method => :delete) %>        
+
+<% end %>
+
+
+
+
+<% if official_signed_in? %>
+
+
+  <%= link_to('Logout', destroy_official_session_path, :method => :delete) %>        
+
+<% end %>
 </div>
 
-<div style = "width: 600px; height: 1000px; background-color:white; float:left; margin-top: 100px;">
+
+<% if current_resident || current_official %>
+	<% else %>
+		<h1 class = "login" style = "float:left;"> Login <h1>
+	<%= render :partial => 'users/resident_login' %>
+
+		<h1 class = "sign_up" style = "float:left;"> Signup <h1>
+	<%= render :partial => 'users/resident_signup' %>
+
+		<h1 class = "official_login" style = "float:left;"> Official Login <h1>
+	<%= render :partial => 'officials/official_login' %>
+
+		<h1 class = "official_signup" style = "float:left; "> Official Signup <h1>
+	<%= render :partial => 'officials/official_signup' %>
+
+	<% end %>
+
+
+<div style = "width: 600px; height: 1000px; background-color: white;float:left; margin-top: 100px; z-index: 1; margin: 0 auto;" >
 <%= render "zip_aggregate_data" %>
 </div>
 <div style = "float:right;">
 	
-<%= render :partial => 'zipcodes/zipcodedash' %>
-
+	<%= render :partial => 'zipcodes/zipcodedash' %>
 
 </div>
