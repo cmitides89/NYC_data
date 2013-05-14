@@ -3,47 +3,47 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-	background-image: url(image_path('New_York.jpg'));
-	background-size: cover; 
-
+	font: 18px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #444;
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
 }
+
 .container {
 	background-color: white;
 }
 
+#nav {
+	margin-bottom: 20px;
+}
+
 #map-canvas {
-	width: 300px;
 	height: 300px;
-}
-
-#main {
-	margin: 0 auto;
-	text-align: center;
-	border: 2px solid black;
-	//height: 300px;
 	width: 100%;
-	//margin-top: 100px;
-	//height: 1200px;
+}
+
+.dashboard {
+	text-align: center;
 	z-index: 0;
-	float: left;
 }
 
-#main table{
-	margin: 0 10% 0 10%;
-
-
+.dashboard h3 {
+	margin-top: 0;
+}
+.dashboard table{
+	margin: 0 auto 0 auto;
 }
 
-#main tr{
+.dashboard tr{
 	height: 25px;
 }
 
-	#main td {
+	.dashboard td {
 		padding: 0 10px 0 10px;
 	}
 
-		#main td:first-child {
-			width: 80px;
+		.dashboard td:first-child {
+			//width: 80px;
 		}
 
 
@@ -84,9 +84,7 @@ body {
 .logout {
 	margin-right: -200px;
 }
-.aggregate {
-	z-index: 0;
-}
+
 .sixteen{
 	background-color: white;
 	width: 800px;

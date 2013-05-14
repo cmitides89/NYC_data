@@ -7,7 +7,7 @@ development:
   adapter: postgresql
   host: localhost
   database: nycdata_development 
-  username: kbajorin
+  username: johnnybowman
   password: 
   pool: 5
   timeout: 5000
@@ -19,7 +19,7 @@ test: &test
   adapter: postgresql
   host: localhost
   database: nycdata_development 
-  username: kbajorin
+  username: johnnybowman
   password: 
   pool: 5
   timeout: 5000
@@ -28,7 +28,7 @@ production:
   adapter: postgresql
   host: localhost
   database: nycdata_development 
-  username: kbajorin
+  username: johnnybowman
   password: 
   pool: 5
   timeout: 5000
