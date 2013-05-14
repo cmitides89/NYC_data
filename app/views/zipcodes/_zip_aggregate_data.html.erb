@@ -13,5 +13,13 @@
 </div>
 
 <script>
-	initMap(<%= @zip.latitude %>, <%= @zip.longitude %>)
+ $(document).ready(function() {
+	initMap(<%= @zip.latitude %>, <%= @zip.longitude %>);
+
+	<% @results.each do |zip| %>
+	
+	addMarker(<%= zip["latitude"].to_f %>, <%= zip["longitude"].to_f %>, '<%= zip["descriptor"]%>');
+
+	<% end %>
+});
 </script>
