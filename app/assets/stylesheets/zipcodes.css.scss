@@ -4,7 +4,7 @@
 
 body {
 	font: 18px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	
+
 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 	-webkit-text-size-adjust: 100%;
 }
@@ -58,13 +58,13 @@ body {
 }
 
 #nav{
-	// position: fixed;
-	margin-top: -20px;
-	
+	position: fixed;
+	margin-top: -10px;
 	height: 100px;
 	background-color: black;
-	z-index: 0;
+	z-index: 9999;
 	text-align:center;
+	width: 99%;
 }
 
 .animation {
@@ -80,9 +80,7 @@ body {
 	text-align: center;
 }
 
-.logout {
-	margin-right: -200px;
-}
+
 
 .sixteen{
 	background-color: white;
