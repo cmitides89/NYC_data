@@ -28,6 +28,7 @@ class ZipcodesController < ApplicationController
 	
 	def show
 		@zip = Zipcode.find(params[:id])
+		@display = Zipcode.display(@zip.name)
 			
 		if current_resident
 			@user = User.find_by_email(current_resident.email)
@@ -41,8 +42,7 @@ class ZipcodesController < ApplicationController
 		end
 
     
- 
-		@results = Zipcode.display(@zip.name)
+ 	
 		noise_complaints = ComplaintDatapoint.where("zipcode_id = ? AND complaint_type = ?", params[:id], "Noise - Commercial")
 		@music_counter = 0
 		@banging_counter = 0

@@ -1,18 +1,36 @@
 $(document).ready(function() {
+	
      $(".login").click(function(){
-        $("#signin").fadeToggle();
-
+        $("#signin").toggle();
      });
 
-     $("#signin").hide();
+     $('#signin').hide();
+     $('.register').hide();
 
-     $(".sign_up").click(function(){
-        $("#signup").fadeToggle();
+     
+     var formWrapper = $('#form_wrapper');
+
+     var linkForm = formWrapper.find('.linkform');
+
+  
 
 
-     });
+linkForm.click(function(){
+	 var currentForm = formWrapper.find('.active');
+     var otherForm = formWrapper.find('.inactive');
+  
+   	console.log('click');
+    currentForm.removeClass('active');
+    currentForm.addClass('inactive');
 
-     $("#signup").hide();
+    otherForm.addClass('active');
+    otherForm.removeClass('inactive');
+	
+    $('.active').fadeIn(1500);
+    $('.inactive').fadeOut(300);
 
+    console.log(currentForm);
+    console.log(otherForm);
+	});
 
 });

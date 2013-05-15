@@ -1,5 +1,5 @@
 
-<div id = "signup" >
+<div id = "signup" class="register inactive" >
 
 
 <h2>Resident Sign up</h2>
@@ -19,7 +19,14 @@
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
 
+
   <div><%= f.submit "Sign up" %></div>
+
+
+    <p  class="linkform" rel="register" style = "font-size: 12px; color: orange;">
+            Have an account? Login here
+        </p>
+
 <% end %>
 
 </div>
