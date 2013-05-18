@@ -5,7 +5,6 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :neighborhood_id
       t.integer :zipcode_id
       t.string :name
-      t.string :email
       t.string :password
 
       t.timestamps

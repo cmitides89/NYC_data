@@ -1,0 +1,88 @@
+// Place all the styles related to the zipcodes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	font: 18px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+}
+
+.container {
+	background-color: white;
+}
+
+
+
+#map-canvas {
+	height: 300px;
+	width: 100%;
+}
+
+.dashboard {
+	text-align: center;
+	z-index: 0;
+}
+
+.dashboard h3 {
+	margin-top: 0;
+}
+.dashboard table{
+	margin: 0 auto 0 auto;
+}
+
+.dashboard tr{
+	height: 25px;
+}
+
+	.dashboard td {
+		padding: 0 10px 0 10px;
+	}
+
+		.dashboard td:first-child {
+			//width: 80px;
+		}
+
+
+
+.search {
+	width: 210px;
+	margin: 0 auto;
+	color: black;
+	float: left;
+}
+
+.search input {
+	vertical-align: middle;
+}
+
+#nav{
+	position: fixed;
+	margin-top: -10px;
+	height: 100px;
+	background-color: black;
+	z-index: 9999;
+	text-align:center;
+	width: 99%;
+}
+
+.animation {
+	color: red;
+}
+
+#aggregate-data-title {
+	text-align: center;
+	margin-top: 1em;
+}
+
+.chart-title {
+	text-align: center;
+}
+
+
+
+.sixteen{
+	background-color: white;
+	width: 800px;
+}

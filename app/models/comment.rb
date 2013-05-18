@@ -1,6 +1,7 @@
 class Comment < ActiveRecord::Base
-  attr_accessible :body, :neighborhood_id, :user_id
+  attr_accessible :body, :neighborhood_id, :user_id, :zipcode_id
 
   belongs_to :user
   belongs_to :neighborhood
+  belongs_to :zipcode
 end
