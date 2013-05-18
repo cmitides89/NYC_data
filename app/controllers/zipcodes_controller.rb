@@ -39,9 +39,8 @@ class ZipcodesController < ApplicationController
 			@user_zip = @user.zipcode.name
 		end
 
-    
- 
 		@results = Zipcode.display(@zip.name)
+		
 		noise_complaints = ComplaintDatapoint.where("zipcode_id = ? AND complaint_type = ?", params[:id], "Noise - Commercial")
 		@music_counter = 0
 		@banging_counter = 0

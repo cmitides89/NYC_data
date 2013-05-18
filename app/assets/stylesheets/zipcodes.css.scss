@@ -2,9 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-	font: 18px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+html {
+	//font: 18px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #444;
+	//background-image: url(image_path('NYC-old-map.png'));
+	//background-size: cover;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+	background-image: url(image_path('NYC-old-map.png'));
+	background-size: cover;
 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 	-webkit-text-size-adjust: 100%;
 }
@@ -14,6 +21,7 @@ body {
 }
 
 #nav {
+	
 	margin-bottom: 20px;
 }
 
@@ -42,8 +50,16 @@ body {
 		padding: 0 10px 0 10px;
 	}
 
-		.dashboard td:first-child {
-			//width: 80px;
+		.dashboard td:nth-child(1) {
+			width: 100px;
+		}
+
+		.dashboard td:nth-child(2) {
+			width: 270px;
+		}
+
+		.dashboard td:nth-child(3) {
+			width: 140px;
 		}
 
 
@@ -83,9 +99,4 @@ body {
 
 .logout {
 	margin-right: -200px;
-}
-
-.sixteen{
-	background-color: white;
-	width: 800px;
 }

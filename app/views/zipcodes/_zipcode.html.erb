@@ -1,5 +1,5 @@
 <tr>
 	<td><%= distance_of_time_in_words_to_now(i["created_date"]) %> ago</td>
-	<td><%= i["descriptor"] %></td>
-	<td><%= i["incident_address"] %></td>
+	<td><%= i["descriptor"].titleize %></td>
+	<td><%= i["incident_address"].titleize %></td>
 </tr>

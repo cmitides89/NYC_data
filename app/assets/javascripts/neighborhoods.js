@@ -8,7 +8,7 @@ $(document).ready(function(){
         console.log($(shape_id));
         $("#" + shape_id).css("fill", "#5df8b8");
         $('.intro').css("display", "block");
-        $('.intro').text(zipcode_name)
+        $('.intro').html("<p>Go to zipcode</p>" + zipcode_name);
 
       });
 

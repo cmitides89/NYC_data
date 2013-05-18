@@ -37,26 +37,4 @@ class Zipcode < ActiveRecord::Base
 		end
 	end
 
-	def self.find_demographics_data
-		file = File.join(Rails.root, 'app', 'assets', 'NYCOpenData', 'rodents.json')
-		json = File.read(file)
-		demographics = JSON.parse(json)
-		demographics = demographics["data"]
-		demographics.each do |incident|
-			complaint = ComplaintDatapoint.new
-			complaint.complaint_type = incident[13]
-			complaint.descriptor = incident[14]
-			if Zipcode.find_by_name(incident[16])
-				complaint.zipcode_id = Zipcode.find_by_name(incident[16]).id
-			else
-				complaint.zipcode_id = Zipcode.create(:name => incident[16]).id
-			end
-			complaint.latitude = incident[57]
-			complaint.longitude = incident[58]
-			complaint.date = incident[9]
-			complaint.address = incident[17]
-			complaint.save!
-		end
-	end
-
 end
