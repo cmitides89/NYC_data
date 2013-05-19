@@ -16,7 +16,7 @@
 <script>
 
  $(document).ready(function() {
-	initMap(<%= @zip.latitude|| 40 %>, <%= @zip.longitude || 40 %>);
+	initMap(<%= @zip.latitude || 40 %>, <%= @zip.longitude || 40 %>);
 
 	<% @display.each do |zip| %>
 	

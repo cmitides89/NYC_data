@@ -8,7 +8,8 @@ $(document).ready(function(){
         console.log($(shape_id));
         $("#" + shape_id).css("fill", "#5df8b8");
         $('.intro').css("display", "block");
-        $('.intro').html("<p>Go to </p>" + zipcode_name);
+        $('.intro').css("color", "red");
+        $('.intro').html("<p><b>Go to</b> </p>" + zipcode_name);
 
       });
 

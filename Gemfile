@@ -10,6 +10,7 @@ gem 'pg'
 gem 'httparty'
 gem 'pry'
 gem 'jasmine'
+gem "binding_of_caller"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -41,6 +42,7 @@ group :development, :test do
 	gem 'rspec-rails', '~>2.0'
 	gem 'shoulda-matchers'
 	gem 'database_cleaner'
+	gem 'better_errors'
 	gem 'simplecov', :require => false
 end
 
