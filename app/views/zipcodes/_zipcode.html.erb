@@ -1,5 +1,6 @@
 <tr>
 	<td><%= distance_of_time_in_words_to_now(i["created_date"]) %> ago</td>
-	<td><%= i["descriptor"].titleize %></td>
-	<td><%= i["incident_address"].titleize %></td>
+
+	<td><%= i["descriptor"].titleize unless i["incident_address"] == nil %></td>
+	<td><%= i["incident_address"].titleize.gsub("Street", "St.").gsub("Avenue", "Ave.") unless i["incident_address"] == nil %></td>
 </tr>

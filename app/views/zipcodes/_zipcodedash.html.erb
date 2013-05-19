@@ -1,27 +1,24 @@
 <div class="dashboard sixteen columns">
+	<h2>Complaints for zipcode <%= @zip.name %></h2>
 	<div class="six columns">
 		<div id="map-canvas"></div>
 	</div>
-	<div class="ten columns">
+	<div class="offset-by-one nine columns">
 		<h3> Most Recent 311 calls for <%= @zip.name %></h3>
-		<table>
-			<tr>
-				<th>Submitted</th>
-				<th>Complaint Type</th>
-				<th>Address</th>
-			</tr>
-			<% @results.each do |i| %>
-				<%= render :partial => 'zipcodes/zipcode', :locals => {:i => i } %>
+			<% if @display.first["descriptor"] %>
+				<table>
+					<tr>
+						<th>Submitted</th>
+						<th>Complaint Type</th>
+						<th>Address</th>
+					</tr>
+					<% @display.each do |i| %>
+						<%= render :partial => 'zipcodes/zipcode', :locals => {:i => i } %>
+					<% end %>
+				</table>
 			<% end %>
-		</table>
 	</div>
-<div>
-
-<div>
-	<% if current_resident || current_official and @user.zipcode_id == @zip.id %>
-		<%= render :partial => 'comments/form' %>
-	<% end %>
-		<!-- <div class="search">	
-			<%= render :partial => 'zipcodes/search' %>
-		</div> -->
 </div>
+
+
+

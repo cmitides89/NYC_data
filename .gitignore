@@ -16,7 +16,7 @@
 /log/*.log
 /tmp
 
-<<<<<<< HEAD
+
 /config/database.yml
 .DS_Store
 /app/.DS_Store
@@ -25,7 +25,3 @@
 /app/helpers/zipcodes_helper.rb
 /test/functional/zipcodes_controller_test.rb
 /test/unit/helpers/zipcodes_helper_test.rb
-
-=======
-/config/database.yml
->>>>>>> neighborhood_index

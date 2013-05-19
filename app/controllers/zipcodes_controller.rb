@@ -19,6 +19,7 @@ class ZipcodesController < ApplicationController
 
 	def search
 		@results = Zipcode.query(params[:search])
+
 	end
 
 	def login
@@ -27,6 +28,7 @@ class ZipcodesController < ApplicationController
 	
 	def show
 		@zip = Zipcode.find(params[:id])
+		@display = Zipcode.display(@zip.name)
 			
 		if current_resident
 			@user = User.find_by_email(current_resident.email)

@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 html {
 	//font: 18px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #444;
@@ -12,17 +13,12 @@ html {
   // -o-background-size: cover;
 	background-image: url(image_path('NYC-old-map.png'));
 	background-size: cover;
+}
+
+body {
+	font: 18px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 	-webkit-text-size-adjust: 100%;
-}
-
-.container {
-	background-color: white;
-}
-
-#nav {
-	
-	margin-bottom: 20px;
 }
 
 #map-canvas {
@@ -35,8 +31,8 @@ html {
 	z-index: 0;
 }
 
-.dashboard h3 {
-	margin-top: 0;
+.dashboard h2 {
+	margin-bottom: 1em;
 }
 .dashboard table{
 	margin: 0 auto 0 auto;
@@ -45,29 +41,29 @@ html {
 .dashboard tr{
 	height: 25px;
 }
-
-	.dashboard td {
-		padding: 0 10px 0 10px;
+	.dashboard th {
+		font-weight: bold;
 	}
 
-		.dashboard td:nth-child(1) {
-			width: 100px;
-		}
+		// .dashboard td:nth-child(1) {
+		// 	width: 100px;
+		// }
 
-		.dashboard td:nth-child(2) {
-			width: 270px;
-		}
+		// .dashboard td:nth-child(2) {
+		// 	width: 270px;
+		// }
 
-		.dashboard td:nth-child(3) {
-			width: 140px;
-		}
+		// .dashboard td:nth-child(3) {
+		// 	width: 140px;
+		// }
 
 
 
 .search {
 	width: 210px;
-	margin: auto auto;
-	line-height: 200px;
+	margin: 0 auto;
+	color: black;
+	float: left;
 }
 
 .search input {
@@ -75,13 +71,11 @@ html {
 }
 
 #nav{
-	//position: fixed;
-	top: 0;
-	left: 0;
 	height: 100px;
 	background-color: black;
-	z-index: 0;
+	z-index: 9999;
 	text-align:center;
+	width: 99%;
 }
 
 .animation {
@@ -93,10 +87,19 @@ html {
 	margin-top: 1em;
 }
 
+.aggregate {
+	margin-top: 2em;
+}
+
 .chart-title {
 	text-align: center;
 }
 
 .logout {
 	margin-right: -200px;
+}
+
+.show-page {
+	background-color: white;
+	padding: 20px 10px 0 10px;
 }
