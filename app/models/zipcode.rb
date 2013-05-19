@@ -9,13 +9,12 @@ class Zipcode < ActiveRecord::Base
 
 	def self.query(zipcode) #< zipcode gets put into query and returns most recent 311 calls from that zipcode
 		HTTParty.get("http://data.cityofnewyork.us/resource/erm2-nwe9.json?incident_zip=#{zipcode}&$limit=5&$select=city,complaint_type,incident_zip,created_date,descriptor,incident_address,&$order=created_date%20DESC")
-		end
+	end
 	def self.display(zipcode)
 		 HTTParty.get("http://data.cityofnewyork.us/resource/erm2-nwe9.json?incident_zip=#{zipcode.to_i}&$limit=5&$select=city,complaint_type,incident_zip,created_date,descriptor,incident_address,location_type,latitude,longitude&$order=created_date%20DESC")
 	end
 
 	def self.find_zip_data
-
 		file = File.join(Rails.root, 'app', 'assets', 'NYCOpenData', 'drinking.json')
 		json = File.read(file)
 		noise_complaints = JSON.parse(json)
@@ -35,6 +34,17 @@ class Zipcode < ActiveRecord::Base
 			complaint.address = incident[17]
 			complaint.save!
 		end
+	end
+
+	#create a hash with key = id and value = total complaints
+
+	def self.find_complaint_totals
+		complaint_totals = Hash.new
+		Zipcode.all.each do |zipcode|	
+			zip_total = ComplaintDatapoint.where("zipcode_id = ?", zipcode.id).count
+			complaint_totals[zipcode.name] = zip_total 
+		end
+		complaint_totals
 	end
 
 end

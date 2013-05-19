@@ -6,11 +6,14 @@ class ZipcodesController < ApplicationController
 		elsif current_official
 			@user = User.find_by_email(current_official.email)
 		end
-		if current_official || current_resident
-		@zipcode = @user.zipcode
-		@user_zip = @user.zipcode.name
 
+		if current_official || current_resident
+			@zipcode = @user.zipcode
+			@user_zip = @user.zipcode.name
 		end
+		
+		
+		
 		respond_to do |format|
 			format.html
 			format.json { render :json => @results }
@@ -28,8 +31,7 @@ class ZipcodesController < ApplicationController
 	
 	def show
 		@zip = Zipcode.find(params[:id])
-		@display = Zipcode.display(@zip.name)
-			
+		@display = Zipcode.display(@zip.name)	
 		if current_resident
 			@user = User.find_by_email(current_resident.email)
 		elsif current_official

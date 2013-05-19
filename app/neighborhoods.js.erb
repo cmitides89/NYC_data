@@ -1,0 +1,5 @@
+$('body').bind('ajax:success', function(e, data) {
+	$('.shape').each(function(shape){
+		$(this).attr('data-total', 'hello');
+	});
+});

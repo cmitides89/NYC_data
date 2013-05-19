@@ -10,6 +10,7 @@ gem 'pg'
 gem 'httparty'
 gem 'pry'
 gem 'jasmine'
+gem 'pry-debugger'
 
 
 # Gems used only for assets and not required
