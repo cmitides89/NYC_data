@@ -7,7 +7,6 @@ $(document).ready(function(){
     $("#" + shape_id).css("fill", "#5df8b8");
     $('.intro').css("display", "block");
     $('.intro').html("<h3>Zipcode " + zipcode_name +"</h3>");
-
   });
 
   $('.shape').mouseleave(function(){

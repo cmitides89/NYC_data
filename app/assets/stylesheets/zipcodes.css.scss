@@ -2,19 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-html {
-	//font: 18px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #444;
-	//background-image: url(image_path('NYC-old-map.png'));
-	//background-size: cover;
-  // -webkit-background-size: cover;
-  // -moz-background-size: cover;
-  // -o-background-size: cover;
-	background-image: url(image_path('NYC-old-map.png'));
-	background-size: cover;
-}
-
 body {
 	font: 18px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
@@ -72,7 +59,7 @@ body {
 
 #nav{
 	height: 100px;
-	background-color: black;
+	// background-color: #8badec;
 	z-index: 9999;
 	text-align:center;
 	width: 99%;
