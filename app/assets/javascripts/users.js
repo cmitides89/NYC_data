@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	
      $(".login").click(function(){
-        $("#signin").toggle();
+        $("#signin").fadeToggle();
      });
 
 
