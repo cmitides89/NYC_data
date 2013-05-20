@@ -4,15 +4,15 @@ $(document).ready(function() {
         $("#signin").toggle();
      });
 
+
      $('#signin').hide();
      $('.register').hide();
 
      
      var formWrapper = $('#form_wrapper');
-
+    
      var linkForm = formWrapper.find('.linkform');
-
-  
+   
 
 
 linkForm.click(function(){
@@ -32,5 +32,7 @@ linkForm.click(function(){
     console.log(currentForm);
     console.log(otherForm);
 	});
+
+
 
 });
