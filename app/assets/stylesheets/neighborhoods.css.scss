@@ -42,16 +42,17 @@ html{
 
 
 .index-page {
-   background-color: rgba(150, 150, 150, 0.6);
+   background-color: rgba(220, 220, 220, 0.8);
 }
 
 .intro {
    border:1px solid white;
    background-color: white;
-   height:250px;
+   height:200px;
    border-radius:40px;
    text-align: center;
    margin-top:200px;
+   padding-top: 20px;
    // margin-top:200px;
    //opacity:0.8;
    filter:alpha(opacity=0);

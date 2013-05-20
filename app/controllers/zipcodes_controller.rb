@@ -11,8 +11,7 @@ class ZipcodesController < ApplicationController
 			@zipcode = @user.zipcode
 			@user_zip = @user.zipcode.name
 		end
-		
-		
+	
 		
 		respond_to do |format|
 			format.html
@@ -104,8 +103,6 @@ class ZipcodesController < ApplicationController
 				else
 			end
 		end
-
-
 
 		render 'show'
 
