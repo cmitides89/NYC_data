@@ -23,12 +23,12 @@
     <% end %>
 
     <% if resident_signed_in? %>
-      <div class = "dashboard_link"><%= link_to('Logout', destroy_resident_session_path, :method => :delete) %>  
+      <div class = "logout"><%= link_to('Logout', destroy_resident_session_path, :method => :delete) %>  
       </div>      
     <% end %>
 
     <% if official_signed_in? %>
-      <h1 class = "dashboard_link">
+      <h1 class = "logout">
         <%= link_to('Logout', destroy_official_session_path, :method => :delete) %>
       </h1>      
     <% end %>

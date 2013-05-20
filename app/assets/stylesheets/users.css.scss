@@ -144,14 +144,23 @@ text-align: center;
 
 // }
 
-.dashboard_link > a{
-	float: right;
-	color: orange;
-	margin-top:-100px;
-	margin-right: 20px;
 
-}
 a{
-	font-size: 12px;
-	color: orange;
+	float: right;
+	margin-top: -60px;
+	width: 250px;
+	border: 2px solid white;
+	
+	font-size: 20px;
+	margin-right: 200px;
+
+	
+
+	
+}
+.logout{
+	float: right;
+}
+.dashboard_link{
+	margin-right:100px;
 }
